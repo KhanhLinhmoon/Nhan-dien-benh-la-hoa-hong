@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>LỊCH SỬ NHẬN DIỆN</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Ảnh gốc</th>
+                <th>Ảnh nhận diện</th>
+                <th>Kết quả</th>
+                <th>Ngày nhận diện</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in history %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><img src="{{ item['image_url'] }}" alt="Ảnh gốc" width="100"></td>
+                <td><img src="{{ item['detected_image_url'] }}" alt="Ảnh nhận diện" width="100"></td>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['date'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

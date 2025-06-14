@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    <style>
+        /* static/css/style1.css */
+body {
+    background-image: url('static/images/background.jpg'); /* đúng nếu ảnh nằm trong static/images/ */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+        .form-wrapper {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-register h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 6px;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0f78d4;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-wrapper">
+        <form class="form-register" method="POST" action="{{ url_for('register') }}">
+            <h2>Đăng ký</h2>
+
+            <label for="username">👤 Tên người dùng</label>
+            <input type="text" id="username" name="username" required placeholder="Nhập tên của bạn">
+
+            <label for="email">📧 Email</label>
+            <input type="email" id="email" name="email" required placeholder="Nhập email hợp lệ">
+
+            <label for="password">🔒 Mật khẩu</label>
+            <input type="password" id="password" name="password" required placeholder="Tối thiểu 6 ký tự">
+
+            <label for="confirm_password">🔒 Xác nhận mật khẩu</label>
+            <input type="password" id="confirm_password" name="confirm_password" required placeholder="Nhập lại mật khẩu">
+
+            <button type="submit">🚀 Đăng ký</button>
+
+            <p class="login-link">Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+        </form>
+    </div>
+</body>
+</html>

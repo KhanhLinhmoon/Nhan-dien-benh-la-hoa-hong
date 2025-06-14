@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phát hiện bệnh trên lá cây hoa hồng</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('static/images/background.jpg');
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        #table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1.2em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            width: 100%;
+        }
+
+        #table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        #table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        #table tbody tr:nth-of-type(even) {
+            background-color: #77c274;
+        }
+
+        #table tbody tr:nth-of-type(odd) {
+            background-color: #599c54;
+        }
+
+        #table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+
+        /* Định nghĩa chiều rộng cho các cột */
+        #table th:nth-child(1), /* Cột STT */
+        #table td:nth-child(1) {
+            width: 10%;
+            text-align: center;
+        }
+
+        #table th:nth-child(2), /* Cột Tên loại bệnh */
+        #table td:nth-child(2) {
+            width: 20%;
+        }
+
+        #table th:nth-child(3), /* Cột Dấu hiệu */
+        #table td:nth-child(3),
+        #table th:nth-child(4), /* Cột Cách trị */
+        #table td:nth-child(4) {
+            width: 35%;
+            word-wrap: break-word;
+            max-width: 35%;
+        }
+
+        .text-center-custom {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .img-thumbnail {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">PHÁT HIỆN BỆNH TRÊN LÁ HOA HỒNG</h1>
+
+        <div class="text-center-custom">
+            <input type="file" id="img" name="file" accept="image/*" onchange="previewImage(event)">
+            <button type="button" class="btn btn-primary" onclick="sendImage()">Detect</button>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6 text-center">
+                <h5>Ảnh gốc</h5>
+                <img id="input" src="/static/images/img-500x500.jpg" class="img-thumbnail">
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Ảnh đã xử lý</h5>
+                <img id="output" src="/static/images/img-500x500.jpg" class="img-thumbnail">
+            </div>
+        </div>
+
+        <div class="mt-4" id="table-container" style="display: none;">
+            <h4 class="text-center mt-4 mb-3">Kết quả nhận diện</h4>
+            <table id="table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên loại bệnh</th>
+                        <th>Dấu hiệu</th>
+                        <th>Cách trị</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- JavaScript sẽ render kết quả vào đây -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('input').src = e.target.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        function sendImage() {
+            const fileInput = document.getElementById('img');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert("Vui lòng chọn ảnh.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/detect', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error) {
+                    alert("Lỗi: " + data.error);
+                    return;
+                }
+
+                document.getElementById('output').src = data.path;
+
+                const tbody = document.getElementById('table-body');
+                tbody.innerHTML = '';
+                let index = 0; // Bắt đầu từ 0 theo hình ảnh
+                for (const key in data) {
+                    if (key !== 'path') {
+                        const info = data[key];
+                        const row = `
+                            <tr>
+                                <td class="text-center">${index++}</td>
+                                <td>${info.name}</td>
+                                <td>${info.treatment}</td> <!-- Dấu hiệu -->
+                                <td>${info.guide}</td> <!-- Cách trị -->
+                            </tr>`;
+                        tbody.innerHTML += row;
+                    }
+                }
+
+                document.getElementById('table-container').style.display = 'block';
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Có lỗi xảy ra khi xử lý ảnh.");
+            });
+        }
+    </script>
+</body>
+</html>

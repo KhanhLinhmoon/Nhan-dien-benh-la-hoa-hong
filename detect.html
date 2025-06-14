@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận xóa lịch sử</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .confirmation-box {
+            background-color: white; /* Nền trắng */
+            border: 2px solid black; /* Khung viền đen */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 400px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        .confirmation-message {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #333; /* Màu chữ phù hợp với nền trắng */
+            margin-top: 15px;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-yes {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-yes:hover {
+            background-color: #c0392b;
+        }
+        
+        .btn-no {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .btn-no:hover {
+            background-color: #2980b9;
+        }
+        
+        .history-info {
+            font-weight: bold;
+            color: #2c3e50; /* Màu chữ phù hợp với nền trắng */
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa; /* Nền sáng cho history-info */
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        <button class="close-btn" onclick="closeDialog()">×</button>
+        
+        <div class="confirmation-message">
+            Bạn có chắc chắn muốn xóa lịch sử nhận diện bệnh STT 10 không?
+        </div>
+        
+        <div class="button-group">
+            <button class="btn btn-yes" onclick="confirmDelete()">Có</button>
+            <button class="btn btn-no" onclick="cancelDelete()">Không</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmDelete() {
+            // Xử lý khi người dùng chọn "Có"
+            alert("Đã xóa lịch sử nhận diện bệnh!");
+            // Thêm code xử lý xóa ở đây
+            // window.location.href = "url_xu_ly_xoa";
+        }
+        
+        function cancelDelete() {
+            // Xử lý khi người dùng chọn "Không"
+            closeDialog();
+        }
+        
+        function closeDialog() {
+            // Xử lý khi người dùng nhấn dấu X
+            // Có thể thay bằng ẩn dialog hoặc chuyển trang
+            alert("Đã hủy thao tác xóa!");
+            // document.querySelector('.confirmation-box').style.display = 'none';
+            // Hoặc: window.location.href = "url_quay_lai_trang_truoc";
+        }
+    </script>
+</body>
+</html>

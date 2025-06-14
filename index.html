@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phát hiện bệnh trên lá cây hoa hồng</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-image: url('{{ url_for("static", filename="images/background.jpg") }}');
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Verdana', Arial, Helvetica, sans-serif;
+        }
+        .navbar {
+            background-color: #28a745;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #d4edda !important;
+            text-decoration: underline;
+        }
+        .nav-link.active {
+            background-color: #218838;
+            border-radius: 5px;
+        }
+        #main-content {
+            min-height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Thanh menu điều hướng -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="{{ url_for('index') }}">HỆ THỐNG NHẬN DIỆN BỆNH HOA HỒNG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('detect') }}">Phát hiện bệnh</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('history') }}">Lịch sử nhận diện</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('handbook') }}">Sổ tay nhận diện</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="main-content">
+            {% block content %}
+            {% endblock %}
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <!-- Sử dụng CDN cho bootstrap.bundle.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Định nghĩa URL detect từ Jinja2
+        const detectUrl = "{{ url_for('detect') }}";
+
+        // Bắt sự kiện submit form
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectForm = document.querySelector('form[action="' + detectUrl + '"]');
+            if (detectForm) {
+                detectForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Ngăn chặn submit mặc định
+                    const formData = new FormData(this);
+
+                    fetch(detectUrl, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text()) // Đổi thành text vì route trả về HTML
+                    .then(data => {
+                        // Chèn nội dung HTML trả về vào trang
+                        document.querySelector('#main-content').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Đã xảy ra lỗi khi gửi yêu cầu.');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

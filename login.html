@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(120deg, #d0e7ff, #fdfbfb);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 14px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .forgot-link {
+            text-align: right;
+            margin-top: -12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+        }
+
+        .forgot-link a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .forgot-link a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0f78d4;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .register-link a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form method="POST" action="{{ url_for('login') }}">
+            <h2>🔐 Đăng nhập</h2>
+
+            <label for="username">👤 Tên người dùng hoặc Email</label>
+            <input type="text" id="username" name="username" required placeholder="Nhập tên hoặc email">
+
+            <label for="password">🔒 Mật khẩu</label>
+            <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+
+            <p class="forgot-link">
+                <a href="{{ url_for('forgot_password') }}">🔁 Quên mật khẩu?</a>
+            </p>
+
+            <button type="submit">👉 Đăng nhập</button>
+
+            <p class="register-link">Chưa có tài khoản? <a href="{{ url_for('register') }}">Đăng ký ngay</a></p>
+        </form>
+    </div>
+</body>
+</html>
