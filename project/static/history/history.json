@@ -1,0 +1,54 @@
+[
+    {
+        "id": 4,
+        "input_image": "/static/images/test.jpg",
+        "output_image": "/static/images/detected_test.jpg",
+        "result": [
+            {
+                "name": "Sương mai",
+                "treatment": "Vết bệnh dạng đốm vàng trên lá non phần ngọn, sau chuyển tím hoặc đen, bám theo gân lá. Lá rụng sớm, biến dạng hoặc khô cháy trong điều kiện hanh khô.",
+                "guide": "Cắt bỏ lá, cành nhiễm bệnh; tăng độ thông thoáng bằng cách tỉa cành và giảm mật độ cây. Tránh tưới nước lên lá, chỉ tưới vào sáng sớm. Trường hợp nặng có thể sử dụng thuốc như: Segovis 1.67SC (2 ml/lít), Subdue Maxx 22ME (2 ml/lít), luân phiên phun 7–14 ngày/lần vào thời điểm mát trong ngày."
+            }
+        ],
+        "timestamp": "2025-06-05 20:45:56"
+    },
+    {
+        "id": 3,
+        "input_image": "/static/images/test.jpg",
+        "output_image": "/static/images/detected_test.jpg",
+        "result": [
+            {
+                "name": "Sương mai",
+                "treatment": "Vết bệnh dạng đốm vàng trên lá non phần ngọn, sau chuyển tím hoặc đen, bám theo gân lá. Lá rụng sớm, biến dạng hoặc khô cháy trong điều kiện hanh khô.",
+                "guide": "Cắt bỏ lá, cành nhiễm bệnh; tăng độ thông thoáng bằng cách tỉa cành và giảm mật độ cây. Tránh tưới nước lên lá, chỉ tưới vào sáng sớm. Trường hợp nặng có thể sử dụng thuốc như: Segovis 1.67SC (2 ml/lít), Subdue Maxx 22ME (2 ml/lít), luân phiên phun 7–14 ngày/lần vào thời điểm mát trong ngày."
+            }
+        ],
+        "timestamp": "2025-06-05 20:34:49"
+    },
+    {
+        "id": 2,
+        "input_image": "/static/images/test.jpg",
+        "output_image": "/static/images/detected_test.jpg",
+        "result": [
+            {
+                "name": "Sương mai",
+                "treatment": "Vết bệnh dạng đốm vàng trên lá non phần ngọn, sau chuyển tím hoặc đen, bám theo gân lá. Lá rụng sớm, biến dạng hoặc khô cháy trong điều kiện hanh khô.",
+                "guide": "Cắt bỏ lá, cành nhiễm bệnh; tăng độ thông thoáng bằng cách tỉa cành và giảm mật độ cây. Tránh tưới nước lên lá, chỉ tưới vào sáng sớm. Trường hợp nặng có thể sử dụng thuốc như: Segovis 1.67SC (2 ml/lít), Subdue Maxx 22ME (2 ml/lít), luân phiên phun 7–14 ngày/lần vào thời điểm mát trong ngày."
+            }
+        ],
+        "timestamp": "2025-06-05 20:24:32"
+    },
+    {
+        "id": 1,
+        "input_image": "/static/images/test.jpg",
+        "output_image": "/static/images/detected_test.jpg",
+        "result": [
+            {
+                "name": "Sương mai",
+                "treatment": "Vết bệnh dạng đốm vàng trên lá non phần ngọn, sau chuyển tím hoặc đen, bám theo gân lá. Lá rụng sớm, biến dạng hoặc khô cháy trong điều kiện hanh khô.",
+                "guide": "Cắt bỏ lá, cành nhiễm bệnh; tăng độ thông thoáng bằng cách tỉa cành và giảm mật độ cây. Tránh tưới nước lên lá, chỉ tưới vào sáng sớm. Trường hợp nặng có thể sử dụng thuốc như: Segovis 1.67SC (2 ml/lít), Subdue Maxx 22ME (2 ml/lít), luân phiên phun 7–14 ngày/lần vào thời điểm mát trong ngày."
+            }
+        ],
+        "timestamp": "2025-06-05 20:24:28"
+    }
+]

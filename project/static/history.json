@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "original_image": "/static/images/aug_0_Downy Mildew (3).JPG",
+        "detected_image": "/static/images/aug_0_Downy Mildew (3).JPG",
+        "result": "Khảm lá",
+        "date": "2025-06-07 22:40:40",
+        "action": "Delete"
+    },
+    {
+        "id": 2,
+        "original_image": "/static/images/Screenshot 2025-06-07 203638.png",
+        "detected_image": "/static/images/Screenshot 2025-06-07 203638.png",
+        "result": "Lá khỏe mạnh, Phấn trắng",
+        "date": "2025-06-08 20:19:03",
+        "action": "Delete"
+    },
+    {
+        "id": 3,
+        "original_image": "/static/images/Screenshot 2025-06-07 203638.png",
+        "detected_image": "/static/images/Screenshot 2025-06-07 203638.png",
+        "result": "Lá khỏe mạnh, Phấn trắng",
+        "date": "2025-06-08 21:48:51",
+        "action": "Delete"
+    },
+    {
+        "id": 4,
+        "original_image": "/static/images/test.jpg",
+        "detected_image": "/static/images/test_detected.jpg",
+        "result": "Sương mai",
+        "date": "2025-06-09 19:55:53",
+        "action": "Delete"
+    },
+    {
+        "id": 5,
+        "original_image": "/static/images/z6-rs650.jpg",
+        "detected_image": "/static/images/z6-rs650_detected.jpg",
+        "result": "Sương mai",
+        "date": "2025-06-09 19:58:47",
+        "action": "Delete"
+    },
+    {
+        "id": 6,
+        "original_image": "/static/images/Mosaic_2.jpg",
+        "detected_image": "/static/images/Mosaic_2_detected.jpg",
+        "result": "Phấn trắng",
+        "date": "2025-06-09 20:00:16",
+        "action": "Delete"
+    },
+    {
+        "id": 7,
+        "original_image": "/static/images/img_8322.webp",
+        "detected_image": "/static/images/img_8322.webp",
+        "result": "Sương mai, Lá khỏe mạnh",
+        "date": "2025-06-09 20:02:21",
+        "action": "Delete"
+    },
+    {
+        "id": 8,
+        "original_image": "/static/images/BPTHH-chuan-2.png",
+        "detected_image": "/static/images/BPTHH-chuan-2.png",
+        "result": "Sương mai, Phấn trắng",
+        "date": "2025-06-09 20:04:19",
+        "action": "Delete"
+    },
+    {
+        "id": 12,
+        "original_image": "/static/images/benh-dom-den-tren-hoa-hong-1.webp",
+        "detected_image": "/static/images/benh-dom-den-tren-hoa-hong-1.webp",
+        "result": "Sương mai",
+        "date": "2025-06-09 20:09:51",
+        "action": "Delete"
+    },
+    {
+        "id": 13,
+        "original_image": "/static/images/Screenshot 2025-06-09 201041.png",
+        "detected_image": "/static/images/Screenshot 2025-06-09 201041.png",
+        "result": "Sương mai",
+        "date": "2025-06-09 20:11:02",
+        "action": "Delete"
+    },
+    {
+        "id": 19,
+        "original_image": "/static/images/images.jpg",
+        "detected_image": "/static/images/images_detected.jpg",
+        "result": "",
+        "date": "2025-06-09 20:22:16",
+        "action": "Delete"
+    },
+    {
+        "id": 20,
+        "original_image": "/static/images/images.jpg",
+        "detected_image": "/static/images/images_detected.jpg",
+        "result": "",
+        "date": "2025-06-09 20:22:20",
+        "action": "Delete"
+    },
+    {
+        "id": 21,
+        "original_image": "/static/images/Screenshot 2025-06-09 202403.png",
+        "detected_image": "/static/images/Screenshot 2025-06-09 202403.png",
+        "result": "Phấn trắng",
+        "date": "2025-06-09 20:24:18",
+        "action": "Delete"
+    },
+    {
+        "id": 22,
+        "original_image": "/static/images/FRESH_LEAF_187.jpg",
+        "detected_image": "/static/images/FRESH_LEAF_187_detected.jpg",
+        "result": "Lá khỏe mạnh",
+        "date": "2025-06-09 20:26:19",
+        "action": "Delete"
+    },
+    {
+        "id": 14,
+        "original_image": "/static/images/test2.JPG",
+        "detected_image": "/static/images/test2.JPG",
+        "result": "Sương mai",
+        "date": "2025-06-13 00:52:47",
+        "action": "Delete"
+    },
+    {
+        "id": 15,
+        "original_image": "/static/images/test3.webp",
+        "detected_image": "/static/images/test3.webp",
+        "result": "Sương mai, Lá khỏe mạnh, Phấn trắng",
+        "date": "2025-06-13 10:39:39",
+        "action": "Delete"
+    },
+    {
+        "id": 16,
+        "original_image": "/static/images/sauanla.jpg",
+        "detected_image": "/static/images/sauanla_detected.jpg",
+        "result": "Sương mai",
+        "date": "2025-06-13 19:48:07",
+        "action": "Delete"
+    },
+    {
+        "id": 17,
+        "original_image": "/static/images/domden.png",
+        "detected_image": "/static/images/domden.png",
+        "result": "Sương mai",
+        "date": "2025-06-14 00:23:19",
+        "action": "Delete"
+    },
+    {
+        "id": 18,
+        "original_image": "/static/images/phantrang.png",
+        "detected_image": "/static/images/phantrang.png",
+        "result": "Sương mai, Lá khỏe mạnh",
+        "date": "2025-06-14 09:37:45",
+        "action": "Delete"
+    },
+    {
+        "id": 19,
+        "original_image": "/static/images/phantrang.webp",
+        "detected_image": "/static/images/phantrang.webp",
+        "result": "Phấn trắng",
+        "date": "2025-06-14 09:44:23",
+        "action": "Delete"
+    },
+    {
+        "id": 20,
+        "original_image": "/static/images/domden.png",
+        "detected_image": "/static/images/domden.png",
+        "result": "Đốm đen",
+        "date": "2025-06-14 12:21:01",
+        "action": "Delete"
+    },
+    {
+        "id": 21,
+        "original_image": "/static/images/sauanla.jpg",
+        "detected_image": "/static/images/sauanla_detected.jpg",
+        "result": "Phấn trắng",
+        "date": "2025-06-14 12:21:43",
+        "action": "Delete"
+    },
+    {
+        "id": 22,
+        "original_image": "/static/images/Suongmai.jpg",
+        "detected_image": "/static/images/Suongmai_detected.jpg",
+        "result": "Sương mai",
+        "date": "2025-06-14 12:21:54",
+        "action": "Delete"
+    },
+    {
+        "id": 23,
+        "original_image": "/static/images/test2.JPG",
+        "detected_image": "/static/images/test2.JPG",
+        "result": "Đốm đen",
+        "date": "2025-06-14 12:22:16",
+        "action": "Delete"
+    },
+    {
+        "id": 24,
+        "original_image": "/static/images/test3.webp",
+        "detected_image": "/static/images/test3.webp",
+        "result": "Đốm đen, Sương mai",
+        "date": "2025-06-14 12:22:33",
+        "action": "Delete"
+    },
+    {
+        "id": 25,
+        "original_image": "/static/images/test.jpg",
+        "detected_image": "/static/images/test_detected.jpg",
+        "result": "Đốm đen",
+        "date": "2025-06-14 12:23:04",
+        "action": "Delete"
+    },
+    {
+        "id": 26,
+        "original_image": "/static/images/Mosaic_2.jpg",
+        "detected_image": "/static/images/Mosaic_2_detected.jpg",
+        "result": "Phấn trắng",
+        "date": "2025-06-14 12:23:38",
+        "action": "Delete"
+    },
+    {
+        "id": 27,
+        "original_image": "/static/images/suongmai1.jpg",
+        "detected_image": "/static/images/suongmai1_detected.jpg",
+        "result": "Đốm đen",
+        "date": "2025-06-14 13:08:24",
+        "action": "Delete"
+    },
+    {
+        "id": 28,
+        "original_image": "/static/images/Rose-black-spot.jpg",
+        "detected_image": "/static/images/Rose-black-spot_detected.jpg",
+        "result": "Đốm đen",
+        "date": "2025-06-14 13:09:33",
+        "action": "Delete"
+    },
+    {
+        "id": 29,
+        "original_image": "/static/images/suongmai1.jpg",
+        "detected_image": "/static/images/suongmai1_detected.jpg",
+        "result": "Đốm đen",
+        "date": "2025-06-14 13:11:03",
+        "action": "Delete"
+    },
+    {
+        "id": 30,
+        "original_image": "/static/images/suongmai1.jpg",
+        "detected_image": "/static/images/suongmai1_detected.jpg",
+        "result": "Sương mai",
+        "date": "2025-06-14 13:11:43",
+        "action": "Delete"
+    },
+    {
+        "id": 31,
+        "original_image": "/static/images/20210521_LZhzuCvKROchbla53qAtZAC5.jpg",
+        "detected_image": "/static/images/20210521_LZhzuCvKROchbla53qAtZAC5_detected.jpg",
+        "result": "Lá khỏe mạnh",
+        "date": "2025-06-14 13:16:01",
+        "action": "Delete"
+    },
+    {
+        "id": 32,
+        "original_image": "/static/images/suongmai1.jpg",
+        "detected_image": "/static/images/suongmai1_detected.jpg",
+        "result": "Đốm đen",
+        "date": "2025-06-16 22:21:53",
+        "action": "Delete"
+    }
+]

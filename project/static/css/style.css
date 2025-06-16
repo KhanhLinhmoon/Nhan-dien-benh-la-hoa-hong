@@ -1,0 +1,108 @@
+body {
+    background-image: url('static/images/background.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #28a745;
+    border-radius: 0;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #f8f9fa !important;
+    text-decoration: underline;
+}
+
+.active {
+    font-weight: bold;
+    background-color: #218838;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+#detect-table {
+    border-collapse: collapse !important;
+    margin: 25px 0 !important;
+    font-size: 1.2em !important;
+    font-family: sans-serif !important;
+    min-width: 400px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) !important;
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+#detect-table thead tr {
+    background-color: #009879 !important;
+    color: #ffffff !important;
+    text-align: center !important;
+}
+
+#detect-table tbody tr {
+    border-bottom: 1px solid #dddddd !important;
+    background-color: transparent !important;
+}
+
+#detect-table tbody tr:nth-of-type(even) {
+    background-color: #77c274 !important;
+}
+
+#detect-table tbody tr:nth-of-type(odd) {
+    background-color: #599c54 !important;
+}
+
+#detect-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879 !important;
+}
+
+#detect-table th:nth-child(1), #detect-table td:nth-child(1) { width: 5%; text-align: center !important; }
+#detect-table th:nth-child(2), #detect-table td:nth-child(2) { width: 15%; }
+#detect-table th:nth-child(3), #detect-table td:nth-child(3),
+#detect-table th:nth-child(4), #detect-table td:nth-child(4) { width: 40%; word-wrap: break-word !important; max-width: 35%; }
+
+.img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.history-img {
+    width: 100px;
+    height: auto;
+}
+
+#detect-section {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.text-center-custom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#detect-table td {
+    font-weight: normal !important;
+}
+
+#section-title {
+    margin-top: 20px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}

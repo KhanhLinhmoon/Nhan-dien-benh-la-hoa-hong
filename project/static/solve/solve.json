@@ -1,0 +1,32 @@
+{
+	"0" :{
+		"name" : "Đốm đen",
+		"treatment" : ["Trigard 100SL","Vertimect 1.8EC"],
+		"guide" : "Cách dùng: pha 20ml/bình 16 lít, phun 4 bình/1000.m2, hoặc 30ml/bình 25 lít, phun 2,5-5 bình/1000m2. Phun khi thấy sâu xuất hiện"
+		
+	},
+	"1" : {
+		"name" : "Sương mai",
+		"treatment" : "Vết bệnh dạng đốm vàng trên lá non phần ngọn, sau chuyển tím hoặc đen, bám theo gân lá. Lá rụng sớm, biến dạng hoặc khô cháy trong điều kiện hanh khô.",
+		"guide" : "Cắt bỏ lá, cành nhiễm bệnh; tăng độ thông thoáng bằng cách tỉa cành và giảm mật độ cây. Tránh tưới nước lên lá, chỉ tưới vào sáng sớm. Trường hợp nặng có thể sử dụng thuốc như: Segovis 1.67SC (2 ml/lít), Subdue Maxx 22ME (2 ml/lít), luân phiên phun 7–14 ngày/lần vào thời điểm mát trong ngày."
+		
+		
+	},
+	"2":{
+		"name" : "Nấm rỉ sắt",
+		"treatment" : ["MANCOZEB", "NATIVO 750WG"],
+		"guide" : "Tưới vào gốc 5 lít dung dịch thuốc/ nọc tiêu hoặc gốc cà phê. + Phun qua lá: Pha 40-50 g/ 10 lít nước. Phun khi bệnh chớm xuất hiện. Lượng nước phun 400-500 lít/ ha."
+		
+	},
+	"3":{
+		"name" : "Đốm rong",
+		"treatment" : ["Coc 85", "Kocide"],
+		"guide" : " Pha 10-20gr cho bình 8L. Phun 400-600L/ha.Phun phòng ngừa và trị khi bệnh mới xuất hiện, nếu bệnh hại nặng nên phun lại lần 2 sau 7 ngày"
+		
+	},
+	"4":{
+		"name" : "Lá khỏe mạnhmạnh",
+		"treatment" : ["Coc 85", "Kocide"],
+		"guide" : " Pha 10-20gr cho bình 8L. Phun 400-600L/ha.Phun phòng ngừa và trị khi bệnh mới xuất hiện, nếu bệnh hại nặng nên phun lại lần 2 sau 7 ngày"
+	}
+}
